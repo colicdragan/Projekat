@@ -2,6 +2,8 @@
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    color: #555555;
 }
 #min{
     float: left;
@@ -156,3 +158,6 @@ button:hover{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+/*font-family: 'Ubuntu', sans-serif;*/
+/*font-family: 'Playfair Display', serif;*/
