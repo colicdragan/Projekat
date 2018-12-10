@@ -109,13 +109,23 @@ footer nav ul li{
     width: 250px;
     font-size: 16px;
 }
-#btn{
+.btn{
     background: white;
     font-size: 18px;
     text-align: center;
     border: 2px solid dimgray;
     width: 200px;
     height: 80px;
+}
+.btn2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.btn2:hover {
+    background-color: #555555;
+    color: white;
 }
 button:hover{
     /*color: orangered;*/
