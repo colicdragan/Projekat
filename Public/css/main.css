@@ -25,8 +25,12 @@ header nav ul li{
      display: block;
      margin-left: auto;
      margin-right: auto;
-     width: 90%;
+     /*width: 90%;*/
  }
+img {
+    width: 100%;
+    height: auto;
+}
 header nav ul li:first-child{
      margin-left: 50px;
 }
@@ -62,54 +66,32 @@ article p{
     text-align: justify;
 }
 
-footer nav{
+footer{
     background: gainsboro;
-    width: 85%;
-    height: 120px;
-}
-footer nav ul li{
-    display: inline-block;
-   /* width: 160px;*/
-    height: 50px;
-    line-height: 50px;
-
-    /*margin-right: 40px;*/
-    /*font-size: 1.6em;*/
-    text-align: right;
-    color: slategray;
-    font-size: 25px;
-}
-.column {
-    flex: 50%;
-    padding: 5px;
 }
 
 /* Clearfix (clear floats) */
-.row {
-    display: flex;
-}
-.blank{
-    padding: 60px;
-}
 .clr{
     clear:both;
 }
 .sign{
     /*color: slategray;*/
-    height: 240px;
+
+    height: 340px;
     padding: 60px;
     text-align: center;
     color: dimgray;
     font-size: 1.9em;
     background: gainsboro;
-    width: 85%;
+    width: 80%;
+
     margin-left: auto;
     margin-right: auto;
 }
 #ema{
     background: gainsboro;
-    width: 250px;
-    font-size: 16px;
+    width: 400px;
+    font-size: 18px;
 }
 .btn{
     background: white;
@@ -161,3 +143,66 @@ button:hover{
 
 /*font-family: 'Ubuntu', sans-serif;*/
 /*font-family: 'Playfair Display', serif;*/
+
+
+.cap_2{
+    color: cadetblue;
+    /*font-size: 1.4em;*/
+}
+.text_i{
+    width: 90%;
+}
+.block_g{
+    background: gainsboro;
+}
+.share{
+    color: cadetblue;
+    text-align: right;
+    /*height: 50px;*/
+}
+.conli{
+    padding: 40px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
+.fa-twitter {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
+.fa-instagram {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
+.fa-pinterest {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
+.fa-tumblr {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
+.fa-google-plus {
+    background: white;
+    color: black;
+    opacity: 0.3;
+}
