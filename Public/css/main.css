@@ -206,3 +206,53 @@ button:hover{
     color: black;
     opacity: 0.3;
 }
+#post4:hover{
+    cursor: pointer;
+    border: 1px solid aqua;
+}
+#txt1:hover{
+    cursor: pointer;
+    color: aqua;
+}
+.modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    padding-top: 200px;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 16px;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    /*border: 1px solid #999;*/
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+    margin: auto;
+    padding:10px;
+    width: 80%;
+}
+.close {
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+#p1:hover{
+    cursor: pointer;
+}
