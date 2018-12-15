@@ -17,9 +17,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Public/css/main.css">
+
 </head>
 <body>
-<form name="calcForm">
+<!--<form name="calcForm">-->
 <div class="container">
 
     <header class="center">
@@ -124,9 +125,12 @@
                 TOP POSTS
             </p>
             <ul>
-                <li>A day exploring the Alps</li>
-                <li>American dream</li>
-                <li>Cold winter days</li>
+                <li id="post1">A day exploring the Alps</li>
+                <p id="p1" class="cap_2">0 COMMENTS</p>
+                <li id="post2">American dream</li>
+                <p id="p2" class="cap_2">0 COMMENTS</p>
+                <li id="post3">Cold winter days</li>
+                <p id="p3" class="cap_2">0 COMMENTS</p>
             </ul>
             <img src="Public/img/post5.png" alt="post3" style="width:100%">
         </div>
@@ -150,20 +154,20 @@
         <div class="col-sm-10">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="Public/img/hp7.png" alt="post3" style="width:100%">
-                    <p class="cap_2" id="p1">
+                    <img src="Public/img/hp7.png" alt="post7" style="width:100%">
+                    <p class="cap_2" id="hp7">
                         Cold winter days
                     </p>
                 </div>
                 <div class="col-sm-4">
-                    <img src="Public/img/hp5.png" alt="post3" style="width:100%">
-                    <p class="cap_2">
+                    <img src="Public/img/hp5.png" alt="post5" style="width:100%">
+                    <p class="cap_2"  id="hp5">
                         A day exploring the Alps
                     </p>
                 </div>
                 <div class="col-sm-4">
-                    <img src="Public/img/hp4.png" alt="post3" style="width:100%">
-                    <p class="cap_2">
+                    <img src="Public/img/hp4.png" alt="post4" style="width:100%">
+                    <p class="cap_2"  id="hp4">
                         American dream
                     </p>
                 </div>
@@ -181,14 +185,16 @@
 
     <SECTION>
         <div>
-            <div id="comm">COMMENTS</div>
-            <div class="row">
-                <div class="col-sm-3" id="user">
+            <div id="comm" class="cap_2">COMMENTS</div>
+            <div class="row" id="ic">
+                <!--<div class="col-sm-3" id="user">
+
 
                 </div>
                 <div class="col-sm-9" id="comment">
 
-                </div>
+
+                </div>-->
 
             </div>
 
@@ -241,6 +247,7 @@
     </nav>
 
 </footer>-->
+<!--<form name="calcForm">-->
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
@@ -254,13 +261,13 @@
             </div>
             <div class="col-sm-10">
                 <label for="Com">Comment</label>
-                <input type="text" class="form-control" id="Com" minlength="1" maxlength="50" placeholder="Comment" value="" required>
+                <input type="text" class="form-control" id="Com" minlength="1" maxlength="500" placeholder="Comment" value="" required>
             </div>
 
         </div>
         <div>
             <!--<button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>-->
-            <button onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"' type="button" class="btn btn-success"  ng-disabled="calcForm.$invalid">Upiši</button>
+            <button onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"' class="btn-success">Submit</button>
         </div>
 
     </div>
@@ -268,7 +275,8 @@
 </div>
 
 
+
 <script src="Public/js/main.js"></script>
-</form>
+<!--</form>-->
 </body>
 </html>

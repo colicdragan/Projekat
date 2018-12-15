@@ -147,6 +147,7 @@ button:hover{
 
 .cap_2{
     color: cadetblue;
+    font-family: 'Ubuntu', sans-serif;
     /*font-size: 1.4em;*/
 }
 .text_i{
@@ -225,13 +226,13 @@ button:hover{
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
-    padding-top: 200px;
+    padding-top: 100px;
     background-color: rgba(0,0,0,0.4);
     font-size: 16px;
 }
 .modal-content {
     position: relative;
-    background-color: #fff;
+    background-color: darkgray;
     /*border: 1px solid #999;*/
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -248,11 +249,30 @@ button:hover{
     font-size: 28px;
     font-weight: bold;
     line-height: 1;
-    color: #000;
+    /*color: #000;*/
     text-shadow: 0 1px 0 #fff;
     opacity: 0.2;
     filter: alpha(opacity=20);
+    color: red;
 }
-#p1:hover{
+.close:hover{
+    color: red;
+    font-size: 38px;
+}
+#hp7:hover{
     cursor: pointer;
+}
+#hp4:hover{
+    cursor: pointer;
+}
+#hp5:hover{
+    cursor: pointer;
+}
+.ww{
+    word-wrap: break-word;
+    font-size: 14px;
+}
+.bold{
+    font-weight: bold;
+    font-size: 14px;
 }
