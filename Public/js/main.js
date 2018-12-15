@@ -35,6 +35,9 @@ $(document).ready(function(){
     });
     $(".close").click(function () {
         $(".modal").hide();
+        rep = false;
+        cur_id = null;
+        $("#Com").val("");
     });
 
     $(".btn-success").click(function () {
