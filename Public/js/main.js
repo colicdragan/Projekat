@@ -9,7 +9,7 @@ $(document).ready(function(){
     var countComDay = 0, countComAlp = 0, countComDream = 0;
     var countRep = 0;
     var test, acc;
-    var cur_id, cap, theme_id, rep = false, img_c;
+    var cur_id, cap, theme_id, rep = false, img_c, dateC, date, date1, date2;
 
     $("#post4").click(function () {
         $("#sidebar").hide();
@@ -61,8 +61,17 @@ $(document).ready(function(){
                 img_c = "<span class='cap_2'>American dream </span>";
         }
 
+
+
+        console.log(dateC);
+
         if (name.length > 0 && com.length > 0){
             $(".modal").hide();
+
+            date = new Date();
+            date1 = date.toString();
+            date2 = date.toLocaleDateString();
+            dateC = date2 + date1.substring(15,24);
 
             if (rep){
                 h = document.getElementById(cur_id);
@@ -83,7 +92,7 @@ $(document).ready(function(){
             console.log(test);*/
 
             h = document.getElementById("user" + i);
-            h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + "</h5>");
+            h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + " " + dateC + "</h5>");
 
             h = document.getElementById("comment" + i);
             acc = like + i;
