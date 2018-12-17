@@ -162,7 +162,7 @@ button:hover{
     /*height: 50px;*/
 }
 .conli{
-    padding: 40px;
+    padding: 30px;
 }
 
 .fa {
@@ -234,16 +234,16 @@ button:hover{
 }
 .modal-content {
     position: relative;
-    background-color: darkgray;
-    /*border: 1px solid #999;*/
+    /*background-color: darkgray;
+    !*border: 1px solid #999;*!
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);*/
+    /*background-clip: padding-box;*/
     outline: 0;
     margin: auto;
-    padding:10px;
+    padding:5px;
     width: 80%;
 }
 .close {
@@ -256,6 +256,10 @@ button:hover{
     opacity: 0.2;
     filter: alpha(opacity=20);
     color: red;
+}
+.blue{
+    color: blue;
+    font-weight: bold;
 }
 .close:hover{
     color: red;

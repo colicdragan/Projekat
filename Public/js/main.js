@@ -40,100 +40,104 @@ $(document).ready(function(){
         $("#Com").val("");
     });
 
-    $(".btn-success").click(function () {
-
+    $("#btns").click(function () {
         name = $("#Name").val();
         com = $("#Com").val();
-        $(".modal").hide();
+
+console.log(name);
+console.log(name.length);
+
+        if (name.length > 0 && com.length > 0){
+            $(".modal").hide();
+
+            if (rep){
+                h = document.getElementById(cur_id);
+                acc ="ic" + i;
+                h.insertAdjacentHTML("afterend", "<div class='row' id=" + acc +"></div>");
+                h = document.getElementById(acc);
+            }else{
+                h = document.getElementById("ic");
+            }
+
+            acc ="comment" + i;
+            h.insertAdjacentHTML("afterbegin", "<div class='col-sm-9' id=" + acc +"></div>");
+            acc ="user" + i;
+            h.insertAdjacentHTML("afterbegin", "<div class='col-sm-3' id=" + acc +"></div>");
 
 
-        if (rep){
-            h = document.getElementById(cur_id);
-            acc ="ic" + i;
-            h.insertAdjacentHTML("afterend", "<div class='row' id=" + acc +"></div>");
-            h = document.getElementById(acc);
-        }else{
-            h = document.getElementById("ic");
-        }
+            /*test = document.getElementById("ic");
+            console.log(test);*/
 
-        acc ="comment" + i;
-        h.insertAdjacentHTML("afterbegin", "<div class='col-sm-9' id=" + acc +"></div>");
-        acc ="user" + i;
-        h.insertAdjacentHTML("afterbegin", "<div class='col-sm-3' id=" + acc +"></div>");
+            h = document.getElementById("user" + i);
+            h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + "</h5>");
 
+            h = document.getElementById("comment" + i);
+            acc = like + i;
+            if (!(rep)) {h.insertAdjacentHTML("afterbegin", "<button  class='btn-default btn-sm' class='btn3' id='" + acc + "'>Reply</button>")};
+            h.insertAdjacentHTML("afterbegin", "<h5 class='ww'>" + com + "</h5>");
 
-        /*test = document.getElementById("ic");
-        console.log(test);*/
+            rep = false;
+            cur_id = null;
+            $("#Com").val("");
 
-        h = document.getElementById("user" + i);
-        h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + "</h5>");
-
-        h = document.getElementById("comment" + i);
-        acc = like + i;
-        if (!(rep)) {h.insertAdjacentHTML("afterbegin", "<button  class='btn-default btn-sm' class='btn3' id='" + acc + "'>Reply</button>")};
-        h.insertAdjacentHTML("afterbegin", "<h5 class='ww'>" + com + "</h5>");
-
-        rep = false;
-        cur_id = null;
-        $("#Com").val("");
-
-        i++;
-        $("#comm").html(i + " COMMENTS");
-        switch(like) {
-            case "Day  ":
-                countComDay++;
-                break;
-            case "Alp  ":
-                countComAlp++;
-                break;
-            case "Dream":
-                countComDream++;
-        }
-        if (countComDay > countComAlp){
-            if (countComDay > countComDream){
-                $("#post1").html("Cold winter days");
-                $("#p1").html(countComDay + " COMMENTS");
-                if (countComAlp > countComDream){
-                    $("#post2").html("A day exploring the Alps");
-                    $("#p2").html(countComAlp + " COMMENTS");
-                    $("#post3").html("American dream");
-                    $("#p3").html(countComDream + " COMMENTS");
+            i++;
+            $("#comm").html(i + " COMMENTS");
+            switch(like) {
+                case "Day  ":
+                    countComDay++;
+                    break;
+                case "Alp  ":
+                    countComAlp++;
+                    break;
+                case "Dream":
+                    countComDream++;
+            }
+            if (countComDay > countComAlp){
+                if (countComDay > countComDream){
+                    $("#post1").html("Cold winter days");
+                    $("#p1").html(countComDay + " COMMENTS");
+                    if (countComAlp > countComDream){
+                        $("#post2").html("A day exploring the Alps");
+                        $("#p2").html(countComAlp + " COMMENTS");
+                        $("#post3").html("American dream");
+                        $("#p3").html(countComDream + " COMMENTS");
+                    }else{
+                        $("#post2").html("American dream");
+                        $("#p2").html(countComDream + " COMMENTS");
+                        $("#post3").html("A day exploring the Alps");
+                        $("#p3").html(countComAlp + " COMMENTS");
+                    }
                 }else{
-                    $("#post2").html("American dream");
-                    $("#p2").html(countComDream + " COMMENTS");
+                    $("#post1").html("American dream");
+                    $("#p1").html(countComDream + " COMMENTS");
+                    $("#post2").html("Cold winter days");
+                    $("#p2").html(countComDay + " COMMENTS");
                     $("#post3").html("A day exploring the Alps");
                     $("#p3").html(countComAlp + " COMMENTS");
                 }
             }else{
-                $("#post1").html("American dream");
-                $("#p1").html(countComDream + " COMMENTS");
-                $("#post2").html("Cold winter days");
-                $("#p2").html(countComDay + " COMMENTS");
-                $("#post3").html("A day exploring the Alps");
-                $("#p3").html(countComAlp + " COMMENTS");
-            }
-        }else{
-            if (countComAlp > countComDream){
-                $("#post1").html("A day exploring the Alps");
-                $("#p1").html(countComAlp + " COMMENTS");
-                if (countComDay > countComDream){
-                    $("#post2").html("Cold winter days");
-                    $("#p2").html(countComDay + "COMMENTS ");
-                    $("#post3").html("American dream");
-                    $("#p3").html(countComDream + " COMMENTS");
+                if (countComAlp > countComDream){
+                    $("#post1").html("A day exploring the Alps");
+                    $("#p1").html(countComAlp + " COMMENTS");
+                    if (countComDay > countComDream){
+                        $("#post2").html("Cold winter days");
+                        $("#p2").html(countComDay + "COMMENTS ");
+                        $("#post3").html("American dream");
+                        $("#p3").html(countComDream + " COMMENTS");
+                    }else{
+                        $("#post2").html("American dream");
+                        $("#p2").html(countComDream + " COMMENTS");
+                        $("#post3").html("Cold winter days");
+                        $("#p3").html(countComDay + " COMMENTS");
+                    }
                 }else{
-                    $("#post2").html("American dream");
-                    $("#p2").html(countComDream + " COMMENTS");
+                    $("#post1").html("American dream");
+                    $("#p1").html(countComDream + " COMMENTS");
+                    $("#post2").html("A day exploring the Alps");
+                    $("#p2").html(countComAlp + " COMMENTS");
                     $("#post3").html("Cold winter days");
                     $("#p3").html(countComDay + " COMMENTS");
                 }
-            }else{
-                $("#post1").html("American dream");
-                $("#p1").html(countComDream + " COMMENTS");
-                $("#post2").html("A day exploring the Alps");
-                $("#p2").html(countComAlp + " COMMENTS");
-                $("#post3").html("Cold winter days");
-                $("#p3").html(countComDay + " COMMENTS");
             }
         }
 
@@ -146,6 +150,7 @@ $(document).ready(function(){
         cur_id = this.id;
         h = document.getElementById(cur_id);
         if (cur_id.length > 5){
+            console.log(cur_id);
             rep = true;
             $(".modal").show();
             like = cur_id.substring(0, 5);
@@ -154,13 +159,3 @@ $(document).ready(function(){
 
 
 });
-
-
-
-/*
-function b() {
-    console.log("colic");
-    console.log(this.id); // or alert($(this).attr('id'));
-    console.log($(this).attr('id')); // or alert($(this).attr('id'));
-}
-*/

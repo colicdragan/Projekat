@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<!--<form name="calcForm">-->
+
 <div class="container">
 
     <header class="center">
@@ -232,51 +232,38 @@
 </div>
 
 
-
-
-<!--<footer>
-    <nav>
-        <ul>
-            <li style="float:left">Terms and conditions</li>
-            <li style="float:left">Privacy</li>
-            <li style="float:right; width: 55px"><a href="https://www.instagram.com/" target="_blank" class="tooltip"><img src="Public/img/i1.jpg" alt="image_i1" width="50" height="50"><span class="tooltiptext">www.instagram.com</span></a></li>
-            <li style="float:right; width: 55px"><a href="https://www.twitter.com/" target="_blank" class="tooltip"><img src="Public/img/t1.jpg" alt="image_t1" width="50" height="50"><span class="tooltiptext">www.twitter.com</span></a></li>
-            <li style="float:right; width: 55px"><a href="https://www.facebook.com/" target="_blank" class="tooltip"><img src="Public/img/f1.jpg" alt="image_f1" width="50" height="50"><span class="tooltiptext">www.facebook.com</span></a></li>
-            &lt;!&ndash;<li style="float:right">Folow</li>&ndash;&gt;
-        </ul>
-    </nav>
-
-</footer>-->
-<!--<form name="calcForm">-->
+<form>
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
+
         <span class="close">&times;</span>
         <!--<p>Some text in the Modal..</p>-->
         <div class="row">
+
             <div class="col-sm-2">
-                <label for="Name">User</label>
-                <input type="text" class="form-control" id="Name" placeholder="Signature" value="" required>
+                <label for="Name" class="blue">User</label>
+                <input type="text" class="form-control" id="Name" minlength="1" maxlength="20" placeholder="Signature" value="" required>
             </div>
             <div class="col-sm-10">
-                <label for="Com">Comment</label>
+                <label for="Com" class="blue">Comment</label>
                 <input type="text" class="form-control" id="Com" minlength="1" maxlength="500" placeholder="Comment" value="" required>
             </div>
 
         </div>
         <div>
             <!--<button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>-->
-            <button onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"' class="btn-success">Submit</button>
+            <button onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"' id="btns">Submit</button>
         </div>
 
     </div>
 
 </div>
-
+</form>
 
 
 <script src="Public/js/main.js"></script>
-<!--</form>-->
+
 </body>
 </html>
