@@ -9,7 +9,7 @@ $(document).ready(function(){
     var countComDay = 0, countComAlp = 0, countComDream = 0;
     var countRep = 0;
     var test, acc;
-    var cur_id, cap, theme_id, rep = false;
+    var cur_id, cap, theme_id, rep = false, img_c;
 
     $("#post4").click(function () {
         $("#sidebar").hide();
@@ -47,6 +47,20 @@ $(document).ready(function(){
         name = $("#Name").val();
         com = $("#Com").val();
 
+        switch(like) {
+            case "DayCW":
+                countComDay++;
+                img_c = "<span class='cap_2'>Cold winter days </span>";
+                break;
+            case "AlpEA":
+                countComAlp++;
+                img_c = "<span class='cap_2'>A day exploring the Alps </span>";
+                break;
+            case "Dream":
+                countComDream++;
+                img_c = "<span class='cap_2'>American dream </span>";
+        }
+
         if (name.length > 0 && com.length > 0){
             $(".modal").hide();
 
@@ -76,7 +90,7 @@ $(document).ready(function(){
             if (!(rep)) {h.insertAdjacentHTML("afterbegin", "<button  class='btn-default btn-sm' class='btn3' id='" + acc + "'>Reply</button>")};
             acc += "com";
             console.log("dodeljen id za komentar " + acc);
-            h.insertAdjacentHTML("afterbegin", "<h5 class='ww' id='" + acc + "'>" + com + "</h5>");
+            h.insertAdjacentHTML("afterbegin", "<h5 class='ww' id='" + acc + "'>" + img_c + com + "</h5>");
 
             rep = false;
             cur_id = null;
@@ -84,16 +98,7 @@ $(document).ready(function(){
 
             i++;
             $("#comm").html(i + " COMMENTS");
-            switch(like) {
-                case "DayCW":
-                    countComDay++;
-                    break;
-                case "AlpEA":
-                    countComAlp++;
-                    break;
-                case "Dream":
-                    countComDream++;
-            }
+
             if (countComDay > countComAlp){
                 if (countComDay > countComDream){
                     $("#post1").html("Cold winter days");
