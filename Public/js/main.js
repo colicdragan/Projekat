@@ -9,7 +9,7 @@ $(document).ready(function(){
     var countComDay = 0, countComAlp = 0, countComDream = 0;
     var countRep = 0;
     var test, acc;
-    var cur_id, tema, rep = false;
+    var cur_id, cap, theme_id, rep = false;
 
     $("#post4").click(function () {
         $("#sidebar").hide();
@@ -23,15 +23,18 @@ $(document).ready(function(){
     });
     $("#hp7").click(function () {
         $(".modal").show();
-        like = "Day  ";
+        like = "DayCW";
+        $("#theme").html("Cold winter days");
     });
     $("#hp5").click(function () {
         $(".modal").show();
-        like = "Alp  ";
+        like = "AlpEA";
+        $("#theme").html("A day exploring the Alps");
     });
     $("#hp4").click(function () {
         $(".modal").show();
         like = "Dream";
+        $("#theme").html("American dream");
     });
     $(".close").click(function () {
         $(".modal").hide();
@@ -43,9 +46,6 @@ $(document).ready(function(){
     $("#btns").click(function () {
         name = $("#Name").val();
         com = $("#Com").val();
-
-console.log(name);
-console.log(name.length);
 
         if (name.length > 0 && com.length > 0){
             $(".modal").hide();
@@ -74,7 +74,9 @@ console.log(name.length);
             h = document.getElementById("comment" + i);
             acc = like + i;
             if (!(rep)) {h.insertAdjacentHTML("afterbegin", "<button  class='btn-default btn-sm' class='btn3' id='" + acc + "'>Reply</button>")};
-            h.insertAdjacentHTML("afterbegin", "<h5 class='ww'>" + com + "</h5>");
+            acc += "com";
+            console.log("dodeljen id za komentar " + acc);
+            h.insertAdjacentHTML("afterbegin", "<h5 class='ww' id='" + acc + "'>" + com + "</h5>");
 
             rep = false;
             cur_id = null;
@@ -83,10 +85,10 @@ console.log(name.length);
             i++;
             $("#comm").html(i + " COMMENTS");
             switch(like) {
-                case "Day  ":
+                case "DayCW":
                     countComDay++;
                     break;
-                case "Alp  ":
+                case "AlpEA":
                     countComAlp++;
                     break;
                 case "Dream":
@@ -150,10 +152,13 @@ console.log(name.length);
         cur_id = this.id;
         h = document.getElementById(cur_id);
         if (cur_id.length > 5){
-            console.log(cur_id);
             rep = true;
             $(".modal").show();
             like = cur_id.substring(0, 5);
+            /*Uzimanje ID od komentara na koji se piše odgovor*/
+            theme_id = cur_id + "com";
+            cap = $("#" + theme_id).html();
+            $("#theme").html(cap);
         }
     })
 

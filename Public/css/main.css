@@ -282,3 +282,7 @@ button:hover{
     font-weight: bold;
     font-size: 14px;
 }
+#theme{
+    background-color: darkgray;
+    font-style: italic;
+ }
