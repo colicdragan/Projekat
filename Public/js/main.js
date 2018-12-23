@@ -61,8 +61,6 @@ $(document).ready(function(){
                 img_c = "<span class='cap_2'>American dream </span>";
         }
 
-
-
         console.log(dateC);
 
         if (name.length > 0 && com.length > 0){
@@ -93,6 +91,7 @@ $(document).ready(function(){
 
             h = document.getElementById("user" + i);
             h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + " " + dateC + "</h5>");
+            /*h.insertAdjacentHTML("afterbegin", "<h5 class='bold'>" + name + "</h5>" + "<h5 class='bold'>" + dateC + "</h5>");*/
 
             h = document.getElementById("comment" + i);
             acc = like + i;

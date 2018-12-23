@@ -79,7 +79,7 @@ footer{
 .sign{
     /*color: slategray;*/
 
-    height: 340px;
+    height: 370px;
     padding: 60px;
     text-align: center;
     color: dimgray;
@@ -92,7 +92,9 @@ footer{
 }
 #ema{
     background: gainsboro;
-    width: 290px;
+    /*width: 290px;*/
+    width: 30%;
+    min-width: 120px;
     font-size: 18px;
 }
 #hrhp{
