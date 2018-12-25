@@ -12,7 +12,8 @@
 }
 header nav ul li{
     display: inline-block;
-    width: 160px;
+    /*width: 160px;*/
+    width: auto;
     height: 30px;
     /*line-height: 30px;*/
     /*margin-right: 40px;*/
@@ -33,10 +34,10 @@ img {
     width: 100%;
     height: auto;
 }
-header nav ul li:first-child{
+/*header nav ul li:first-child{
      margin-left: 50px;
-}
-nav ul li:hover{
+}*/
+nav ul li a:hover{
     color: orangered;
     cursor: pointer;
 }
@@ -70,6 +71,9 @@ article p{
 
 footer{
     background: gainsboro;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
 }
 
 /* Clearfix (clear floats) */
@@ -92,10 +96,12 @@ footer{
 }
 #ema{
     background: gainsboro;
+
     /*width: 290px;*/
     width: 30%;
     min-width: 120px;
     font-size: 18px;
+    border: none;
 }
 #hrhp{
     margin-left: auto;
@@ -194,6 +200,8 @@ button:hover{
 
 .fa:hover {
     opacity: 0.7;
+    color: black;
+    text-decoration: none;
 }
 .fa-facebook {
     background: white;
